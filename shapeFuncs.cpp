@@ -84,7 +84,12 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance)
    // and the definition in your utility.cpp file.
 
    // TODO: FILL THIS IN WITH APPROPRIATE CODE
+    if ( approxEqual( b1.width, b2.width, tolerance) && approxEqual(b1.height,  b2.height, tolerance) && pointsApproxEqual(b1.ul , b2.ul, tolerance))
+       {return true;}
 
+
+
+  
    return false; // STUB!  TODO: Delete this line and comment and replace with appropriate code
 }
 
@@ -99,6 +104,10 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance)
 
 void initBox(struct Box *b, double ulx, double uly, double w, double h)
 {
+   b->ul.x = ulx;
+   b->ul.y = uly;
+   b->width = w;
+   b->height = h;
    return; // @@@ For a void function a "naked return" is a "do nothing" stub
 }
 
