@@ -14,7 +14,8 @@ using namespace std;
 
 double distanceBetween(Point p, Point q)
 {
-   return 99999.9; // @@@ STUB
+   return getLength(p.x, p.y, q.x ,q.y);
+                   // @@@ STUB
                    // HINTS: The distance formula is something you hopefully remember
                    //   from H.S. algebra, but if not, Wikipedia is your friend.
                    //   The sqrt function is available when you use #include <cmath>,
